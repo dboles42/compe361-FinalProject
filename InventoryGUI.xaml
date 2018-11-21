@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Height="146" Margin="300,75,0,0" Text="Inventory" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontSize="72" FontWeight="Bold" TextAlignment="Center"/>
+        <Button Content="Add item" HorizontalAlignment="Left" Height="68" Margin="126,622,0,0" VerticalAlignment="Top" Width="225" FontSize="22"/>
+        <ListView x:Name="Listed_items" HorizontalAlignment="Left" Height="249" Margin="126,296,0,0" VerticalAlignment="Top" Width="759"/>
+        <Button Content="Remove Item" HorizontalAlignment="Left" Height="68" Margin="465,622,0,0" VerticalAlignment="Top" Width="206" FontSize="20"/>
+        <Button Content="Edit Item" HorizontalAlignment="Left" Height="66" Margin="750,622,0,0" VerticalAlignment="Top" Width="189"/>
+
+    </Grid>
+</Page>
