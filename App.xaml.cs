@@ -14,11 +14,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using DataAccessLibrary;
-using assets;
-using System.Data.SqlTypes;
+using COMPE361Project;
 
-namespace MainFinalDatabase
+namespace InventoryGUI
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -33,9 +31,6 @@ namespace MainFinalDatabase
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            DataAccess.InitializeDatabase();
-            //Add also retrieval of database into inventory list here
         }
 
         /// <summary>
@@ -72,7 +67,7 @@ namespace MainFinalDatabase
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(Page1), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

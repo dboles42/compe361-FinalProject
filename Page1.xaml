@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="InventoryGUI.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InventoryGUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="pageTitle">
+        <TextBlock x:Name="pageTitle1" HorizontalAlignment="Left" Margin="110,62,0,0" Text="Login" TextWrapping="Wrap" VerticalAlignment="Top" Height="86" Width="311" FontSize="48" TextAlignment="Center"/>
+        <Button Content="Go to page 2" HorizontalAlignment="Left" Height="69" Margin="119,500,0,0" VerticalAlignment="Top" Width="206" Click="buttonClick1"/>
+
+    </Grid>
+</Page>
