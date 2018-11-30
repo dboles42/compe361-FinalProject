@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="MainFinalDatabase.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MainFinalDatabase"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local1="using:assets"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <RelativePanel>
+            <ListView Name="InventoryList"
+                  SelectionMode="Single"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.IsVerticalRailEnabled="True"
+                  ScrollViewer.VerticalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollMode="Enabled"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.IsHorizontalRailEnabled="True"
+                  Margin="20">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal"  >
+                            <TextBlock Text="ID" Margin="8,0" Width="50" Foreground="DarkRed" />
+                            <TextBlock Text="Info Link" Width="300" Foreground="DarkRed" />
+                            <TextBlock Text="SerialNumber" Width="200" Foreground="DarkRed" />
+                            <TextBlock Text="Price" Width="80" Foreground="DarkRed" />
+                            <TextBlock Text="Date" Width="80" Foreground="DarkRed" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local1:Asset">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Name="ItemId"
+                                    Text="{x:Bind IDnumber}"
+                                    Width="50" />
+                            <TextBlock Name="ItemName"
+                                    Text="{x:Bind InfoLink}"
+                                    Width="300" />
+                            <TextBlock Text="{x:Bind SerialNumber}"
+                                   Width="200" />
+                            <TextBlock Text="{x:Bind Price}"
+                                   Width="80" />
+                            <TextBlock Text="{x:Bind Date}"
+                                   Width="80" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+    </Grid>
+</Page>
